@@ -1,0 +1,1 @@
+cd .. && docker build ./wechatpush -t pushinfo:1.0
