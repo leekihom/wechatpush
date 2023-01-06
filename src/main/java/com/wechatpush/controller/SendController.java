@@ -68,8 +68,8 @@ public class SendController {
         templateMessage.addData(new WxMpTemplateData("today",today,"#4EEE94"));
         templateMessage.addData(new WxMpTemplateData("chineseDate",chinese.toString(),"#a0ee32"));
         templateMessage.addData(new WxMpTemplateData("city",weather.getCity()+"","#7A378B"));
-        templateMessage.addData(new WxMpTemplateData("wendu",weather.getTemp()+"度"+"","#3aeede"));
-        templateMessage.addData(new WxMpTemplateData("tiganwendu",weather.getFeelsLike()+"度"+"","#7B68EE"));
+        templateMessage.addData(new WxMpTemplateData("wendu",weather.getTemp()+"℃"+"","#3aeede"));
+        templateMessage.addData(new WxMpTemplateData("tiganwendu",weather.getFeelsLike()+"℃"+"","#7B68EE"));
         templateMessage.addData(new WxMpTemplateData("weather",weather.getText()+"","#eea5e1"));
         templateMessage.addData(new WxMpTemplateData("windDir",weather.getWindDir()+"","#caee53"));
         templateMessage.addData(new WxMpTemplateData("humidity",weather.getHumidity()+"","#eed42e"));

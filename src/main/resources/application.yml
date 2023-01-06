@@ -24,8 +24,8 @@ yiyan:
   api: "https://v1.hitokoto.cn/?c=k&encode=text"
 
 TimerTask:
-  cron: 0 58 0 * * ?
+  cron: 0 30 7 * * ?
 
 server:
   port: 8081
-#docker run --name pushinfo -p 8081:8081 -d pushinfo:1.0
+#docker run -dit --name wechatpush -p 8081:8081  -d wechatpush
