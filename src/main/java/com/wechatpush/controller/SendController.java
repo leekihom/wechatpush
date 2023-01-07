@@ -3,6 +3,7 @@ package com.wechatpush.controller;
 import cn.hutool.core.date.ChineseDate;
 import com.wechatpush.entity.Indices;
 import com.wechatpush.entity.Weather;
+import com.wechatpush.service.MailService;
 import com.wechatpush.utils.FormatTime;
 import com.wechatpush.utils.WeatherUtil;
 import com.wechatpush.utils.YiyanUtil;
@@ -38,6 +39,8 @@ public class SendController {
 
     @Autowired
     private YiyanUtil yiyanUtil;
+    @Autowired
+    private MailService mailService;
 
 
 
@@ -87,6 +90,7 @@ public class SendController {
         try {
             log.info(templateMessage.toJson());
             wxMpService.getTemplateMsgService().sendTemplateMsg(templateMessage);
+            mailService.sendSimpleMail("leelzh@foxmail.com","公众号每日推送",templateMessage.toJson());
         } catch (Exception e) {
             System.out.println("推送失败：" + e.getMessage());
             e.printStackTrace();

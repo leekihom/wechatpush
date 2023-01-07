@@ -1,4 +1,5 @@
-
+server:
+  port: 8081
 wx:
   appID: wx7cc610023ca5b1c2
   appsecret: c6a602717ab10987b87e74327eb78e24
@@ -24,8 +25,17 @@ yiyan:
   api: "https://v1.hitokoto.cn/?c=k&encode=text"
 
 TimerTask:
-  cron: 0 58 0 * * ?
-
-server:
-  port: 8081
+  cron: * 30 7 * * ?
+spring:
+  mail:
+    host: smtp.qq.com
+    port: 587
+    username: 2578527296@qq.com
+    from: 2578527296@qq.com
+    #邮箱授权码
+    password: kwejlsqlgjcvdjcc
+    properties:
+      mail.smtp.auth: true
+      mail.smtp.starttls.enable: true
+    default-encoding: utf-8
 #docker run --name pushinfo -p 8081:8081 -d pushinfo:1.0
